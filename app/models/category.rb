@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
   has_many :links
 
-  attr_accessor :label, :color
+  attr_accessible :label, :color
 end

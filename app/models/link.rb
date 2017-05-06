@@ -3,5 +3,5 @@ class Link < ApplicationRecord
   belongs_to :list
   belongs_to :category
 
-  attr_accessor :url, :title
+  attr_accessible :url, :title
 end

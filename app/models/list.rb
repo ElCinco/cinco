@@ -1,5 +1,5 @@
 class List < ApplicationRecord
   has_many :links
 
-  attr_accessor :publish_date
+  attr_accessible :publish_date
 end
