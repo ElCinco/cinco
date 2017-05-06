@@ -1,8 +1,18 @@
 Logged in as <%= current_user.username %>
 
 <ul>
-  <li>Create List</li>
-  <li>Create Link</li>
-  <li>Manage Categories</li>
-  <li>Create User</li>
+  <li>
+    <% if List.created_for_today %>
+      List created for <%= Date.today %>
+    <% else %>
+      <%= link_to 'Create List', admin_create_list_path %>
+    <% end %>
+  </li>
+  <li>
+    <% if Link.created_for_today_by_user(current_user) %>
+      Link created by <%= current_user.username %> for <%= Date.today %>
+    <% else %>
+      <%= link_to 'Create Link', admin_create_link_path %>
+    <% end %>
+  </li>
 </ul>
