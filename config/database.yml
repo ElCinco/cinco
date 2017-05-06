@@ -19,5 +19,5 @@ production:
   encoding: utf8
   database: cinco_production
   pool: 5
-  username:
-  password:
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
