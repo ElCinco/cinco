@@ -7,16 +7,19 @@ class AdminController < ApplicationController
   def create_user
   end
 
-  def create_list_form
+  def new_list
+    @list = List.new
   end
 
-  def create_list(link)
+  def create_list
+    @list = List.new(params[:list])
   end
 
-  def create_link_form
+  def new_link
     @link = Link.new
   end
 
-  def create_link(link)
+  def create_link
+    @link = Link.new(params[:link])
   end
 end

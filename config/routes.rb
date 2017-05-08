@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get 'admin/index'
-  get 'admin/create_user'
-  get 'admin/create_list' => 'admin#create_list_form'
-  get 'admin/create_link' => 'admin#create_link_form'
+  get 'admin/new_list'
+  get 'admin/new_link'
   get '/admin' => 'admin#index'
 
   post 'admin/create_list'
