@@ -1,19 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
 html, body {
   background: lightblue;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
+
 a {
   text-decoration: none;
 }
 
-
-
+li {
+  padding:10px 0;
+}
 
 .user_nav {
   width: 100%;
   text-align: right;
   padding:10px;
+}
+
+.title-header, .url-title {
+  opacity:0;
+  transition: opacity .4s;
+}
+
+.flash-in {
+  opacity:1;
+}
+
+.admin-list {
+  label {
+    display:block;
+    margin-bottom:8px;
+  }
 }

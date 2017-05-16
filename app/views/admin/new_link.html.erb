@@ -1,22 +1,24 @@
 <h2>Create Your Link</h2>
 
 <%= form_for(@link, url: admin_create_link_path(@link)) do |f| %>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url, autofocus: true, autocomplete: "off" %>
-  </div>
+  <ul class="admin-list">
+    <li class="field">
+      <%= f.label :url %>
+      <%= f.text_field :url, autofocus: true, autocomplete: "off" %>
+    </li>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <p class="url-title"></p>
-  </div>
+    <li class="field">
+      <%= f.label :category %>
+      <%= f.collection_select :category_id, Category.order(:label), :id, :label, include_blank: true %>
+    </li>
 
-  <div class="field">
-    <%= f.label :category %><br />
-    <%= f.collection_select :category_id, Category.order(:label), :id, :label, include_blank: true %>
-  </div>
+    <li class="field">
+      <%= f.label :title, :class=> "title-header" %>
+      <p class="url-title"></p>
+    </li>
 
-  <div class="actions">
-    <%= f.submit "Save Link" %>
-  </div>
+    <li class="actions">
+      <%= f.submit "Save Link" %>
+    </li>
+  </ul>
 <% end %>

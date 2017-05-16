@@ -12,6 +12,7 @@ $(document).ready ->
         alert('error ' + textStatus + ' ' + errorThrown)
       success: (data, textStatus, jqXHR) ->
         $('.url-title').html data.title
+        $('.title-header, .url-title').addClass('flash-in')
 
 
   options = {
