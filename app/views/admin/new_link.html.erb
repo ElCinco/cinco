@@ -7,11 +7,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
     <%= f.label :category %><br />
     <%= f.collection_select :category_id, Category.order(:label), :id, :label, include_blank: true %>
   </div>
