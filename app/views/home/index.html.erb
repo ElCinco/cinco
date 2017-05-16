@@ -1,6 +1,6 @@
 <% if @list %>
   <div class="list">
-    <span class="date"><%= @list.publish_date %></span>  
+    <span class="date"><%= l @list.publish_date %></span>  
     <ul>
       <% @list.links.each do |link| %>
       <li>
