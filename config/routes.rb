@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'admin/index'
   get 'admin/new_list'
   get 'admin/new_link'
+  get 'admin/categories'
   get '/admin' => 'admin#index'
 
   post 'admin/create_list'

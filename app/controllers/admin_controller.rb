@@ -7,6 +7,9 @@ class AdminController < ApplicationController
   def create_user
   end
 
+  def categories
+  end
+
   def new_list
     @list = List.new
   end
