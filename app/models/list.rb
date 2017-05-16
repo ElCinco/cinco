@@ -4,6 +4,10 @@ class List < ApplicationRecord
   def self.created_for_today
     list = List.last
 
-    return list && list.publish_date == Date.today
+    if list && list.publish_date == Date.today
+      return list
+    end
+
+    false
   end
 end

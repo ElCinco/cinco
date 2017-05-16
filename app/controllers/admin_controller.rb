@@ -16,6 +16,9 @@ class AdminController < ApplicationController
 
   def create_list
     @list = List.new(list_params)
+    @list.save
+
+    redirect_to admin_path
   end
 
   def new_link
@@ -24,6 +27,13 @@ class AdminController < ApplicationController
 
   def create_link
     @link = Link.create(link_params)
+    @link.list = List.created_for_today
+    @link.title = get_title(@link.url)
+    @link.user = current_user
+
+    @link.save
+
+    redirect_to admin_path
   end
 
   def process_link
@@ -56,6 +66,6 @@ class AdminController < ApplicationController
     end
 
     def link_params
-      params.require(:link).permit(:url, :title, :category_id)
+      params.require(:link).permit(:url, :title, :category_id, :list_id)
     end
 end
