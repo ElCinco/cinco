@@ -2,7 +2,10 @@
   <%= @list.publish_date %>
   <ul>
     <% @list.links.each do |link| %>
-    <li><%= link.id %></li>
+    <li>
+      <a href="<%= link.url %>"><%= link.title %></a>
+      <span class="category"><%= link.category.label %></span>
+    </li>
     <% end %>
   </ul>
 <% else %>
