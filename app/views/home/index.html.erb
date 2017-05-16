@@ -1,13 +1,15 @@
 <% if @list %>
+  <div class="list">
   <%= @list.publish_date %>
-  <ul>
-    <% @list.links.each do |link| %>
-    <li>
-      <a href="<%= link.url %>"><%= link.title %></a>
-      <span class="category"><%= link.category.label %></span>
-    </li>
-    <% end %>
-  </ul>
+    <ul>
+      <% @list.links.each do |link| %>
+      <li>
+        <a href="<%= link.url %>"><%= link.title %></a>
+        <span class="category"><%= link.category.label %></span>
+      </li>
+      <% end %>
+    </ul>
+</div>
 <% else %>
   No lists!
 <% end %>
