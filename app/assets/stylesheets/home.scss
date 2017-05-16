@@ -3,17 +3,20 @@
   padding:24px 0;
   text-align: center;
   a {
-    font-size:30px;
+    font-size:48px;
     color:lightblue;
   }
 }
 
 .list {
   max-width:420px;
-  margin:auto;
+  margin:30px auto;
   > ul {
     li {
-      padding:10px 0
+      padding:10px 0;
+      a {
+        font-size:18px;
+      }
     }
   }
 }

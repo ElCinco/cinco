@@ -1,9 +1,19 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background:lightblue;
+html, body {
+  background: lightblue;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 a {
   text-decoration: none;
+}
+
+
+
+
+.user_nav {
+  width: 100%;
+  text-align: right;
+  padding:10px;
 }
