@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'admin/categories'
   get '/admin' => 'admin#index'
 
+  post 'admin/process_link'
   post 'admin/create_list'
   post 'admin/create_link'
 
