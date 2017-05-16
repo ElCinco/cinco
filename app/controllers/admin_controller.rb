@@ -37,7 +37,11 @@ class AdminController < ApplicationController
 
 
     respond_to do |format|
-      format.js { render json: @title }
+      format.json do
+        render json: {
+          title: @title
+        }.to_json
+      end
     end
   end
 end

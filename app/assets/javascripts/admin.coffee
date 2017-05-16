@@ -4,10 +4,15 @@
 
 $(document).ready ->
   processUrl = ->
-    $.post "/admin/process_link",
-      url: $('#link_url').val()
-      (title) ->
-        $('.url-title').append title
+    $.ajax
+      type: "POST"
+      url: "/admin/process_link"
+      data: { url: $('#link_url').val() }
+      error: (jqXHR, textStatus, errorThrown) ->
+        alert('error ' + textStatus + ' ' + errorThrown)
+      success: (data, textStatus, jqXHR) ->
+        $('.url-title').html data.title
+
 
   options = {
     callback: processUrl
