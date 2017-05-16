@@ -10,7 +10,11 @@
 
   <body>
     <div class="user_nav">
-      <%= link_to 'Log In', admin_path %>
+      <% if current_user %>
+        Logged in as <%= current_user.username %>. <%= link_to 'Admin something or other', admin_path %>
+      <% else %>
+        <%= link_to 'Log In', admin_path %>
+      <% end %>
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
