@@ -17,6 +17,6 @@ $(document).ready ->
 
   options = {
     callback: processUrl
-    wait: 1000
+    wait: 300
   }
   $('#link_url').typeWatch(options)
