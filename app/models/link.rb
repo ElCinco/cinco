@@ -1,6 +1,7 @@
 class Link < ApplicationRecord
   belongs_to :user
   belongs_to :list
+  validates_associated :list
 
   def self.created_for_today_by_user(user)
     if List.created_for_today
