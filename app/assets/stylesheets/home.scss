@@ -6,12 +6,12 @@
 
 
 .site-title {
-  background:darkblue;
+  background:#250D45;
   padding:24px 0;
   text-align: center;
   a {
     font-size:48px;
-    color:lightblue;
+    color:#00AEEF;
   }
 }
 
@@ -22,7 +22,7 @@
   .date {
     width: 100%;
     display:block;
-    border-bottom:1px solid darkblue;
+    border-bottom:1px solid #250D45;
     text-align: center;
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -31,7 +31,7 @@
     li {
       a {
         font-size:18px;
-        color:darkblue;
+        color:#250D45;
         &:visited {
           color:#576cb9;
         }
