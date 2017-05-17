@@ -7,11 +7,6 @@
     </li>
 
     <li class="field">
-      <%= f.label :category %>
-      <%= f.collection_select :category_id, Category.order(:label), :id, :label, include_blank: true %>
-    </li>
-
-    <li class="field">
       <%= f.label :title, :class=> "title-header" %>
       <p class="url-title"></p>
     </li>

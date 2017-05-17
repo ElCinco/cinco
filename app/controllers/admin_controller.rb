@@ -7,9 +7,6 @@ class AdminController < ApplicationController
   def create_user
   end
 
-  def categories
-  end
-
   def new_list
     @list = List.new
   end
@@ -66,6 +63,6 @@ class AdminController < ApplicationController
     end
 
     def link_params
-      params.require(:link).permit(:url, :title, :category_id, :list_id)
+      params.require(:link).permit(:url, :title, :list_id)
     end
 end
