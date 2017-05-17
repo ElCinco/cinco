@@ -1,11 +1,11 @@
 <% if @list %>
   <div class="list">
-    <h2 class="date"><%= l @list.publish_date %></h2>  
+    <h2 class="date"><%= l @list.publish_date %></h2>
     <ul>
       <% @list.links.each do |link| %>
       <li>
         <a href="<%= link.url %>"><%= link.title %></a>
-        <span class="category"><%= link.category.label %></span>
+        <!--<span class="category"><%= link.category.label %></span>-->
       </li>
       <% end %>
     </ul>
