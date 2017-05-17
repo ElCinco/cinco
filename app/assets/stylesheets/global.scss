@@ -26,6 +26,12 @@ li {
   transition: opacity .4s;
 }
 
+.url-title {
+  background-color: rgba(255,255,255,.25);
+  padding: 10px;
+  margin-left: -10px;
+}
+
 .flash-in {
   opacity:1;
 }
