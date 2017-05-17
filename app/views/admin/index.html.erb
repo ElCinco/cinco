@@ -1,12 +1,5 @@
 <ul>
   <li>
-    <% if List.created_for_today %>
-      List already created for <%= Date.today %>
-    <% else %>
-      <%= link_to 'Create List', admin_new_list_path %>
-    <% end %>
-  </li>
-  <li>
     <% if Link.created_for_today_by_user(current_user) %>
       Link created by <%= current_user.username %> for <%= Date.today %>
     <% else %>

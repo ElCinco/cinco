@@ -7,15 +7,16 @@ class AdminController < ApplicationController
   def create_user
   end
 
-  def new_list
-    @list = List.new
-  end
-
   def create_list
-    @list = List.new(list_params)
-    @list.save
+    if !List.created_for_today
+      @list = List.new
+      @list.publish_date = Date.today
+      @list.save
+    end
 
-    redirect_to admin_path
+    @list = List.created_for_today
+
+    @list
   end
 
   def new_link
@@ -24,6 +25,11 @@ class AdminController < ApplicationController
 
   def create_link
     @link = Link.create(link_params)
+
+    if !List.created_for_today
+      create_list
+    end
+
     @link.list = List.created_for_today
     @link.title = get_title(@link.url)
     @link.user = current_user
