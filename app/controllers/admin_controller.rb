@@ -56,9 +56,8 @@ class AdminController < ApplicationController
   def get_title(url)
     @title = false
     a = Mechanize.new
-    a.get(url) do |page|
-      @title = page.title
-    end
+    page = a.get(url)
+    @title = page.at('head title').text.strip
 
     return @title
   end
