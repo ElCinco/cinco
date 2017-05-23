@@ -1,4 +1,5 @@
-<ul>
+<ul class="admin-links">
+  <li class="admin-welcome-header"> Welcome <%= current_user.username %> <span class="tilda">~</span></li>
   <li>
     <% if Link.created_for_today_by_user(current_user) %>
       Link created by <%= current_user.username %> for <%= Date.today %>

@@ -97,3 +97,16 @@ h2.admin {
     border: 1px solid lightgrey;
   }
 }
+.admin-links {
+  text-align:center;
+}
+.admin-welcome-header {
+  font-weight:bold;
+  text-transform: lowercase;
+  font-size: 20px;
+  .tilda {
+    display: block;
+    margin: 2px 12px -14px 12px;
+    font-size: 36px;
+  }
+}
