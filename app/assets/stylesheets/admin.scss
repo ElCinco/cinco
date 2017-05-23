@@ -1,7 +1,66 @@
+.icon-user-actions {
+  box-sizing:initial;
+  width: 68px;
+  height: 68px;
+  background:#250D45 url(image_path('icon-gear.png')) no-repeat center;
+  background-size: 60%;
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 22px;
+  cursor: pointer;
+  z-index: 20;
+  margin:9px;
+  &:hover {
+    border:9px solid #00AEEF;
+    border-bottom: 0;
+    margin:0;
+  }
+}
+.user-nav-items {
+  display: none;
+  position: absolute;
+  top: 59px;
+  right: -26px;
+  width: 502px;
+  height: 220px;
+  background: #250D45;
+  border: 9px solid #00AEEF;
+  padding:26px;
+  li {
+    color:#00AEEF;
+
+    text-align:center;
+    &:first-child {
+      font-weight:bold;
+      text-transform: lowercase;
+      font-size: 20px;
+      .tilda {
+        display: block;
+        margin: 2px 12px -14px 12px;
+        font-size: 36px;
+      }
+      .the-dirtiest-code {
+        width: 68px;
+        height: 9px;
+        position: absolute;
+        top: -9px;
+        right: 17px;
+        background: #250d45;
+      }
+    }
+    a {
+      color:#00AEEF;
+    }
+  }
+}
+.show-user-nav {
+  display:block;
+}
 .user_nav {
-  width: 100%;
-  text-align: right;
-  padding:10px;
+  position: absolute;
+  right: 50%;
+  margin-right: -250px;
 }
 
 .title-header, .url-title {
