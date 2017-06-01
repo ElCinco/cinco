@@ -1,0 +1,37 @@
+$(function() {
+  /*!
+   * Dynamically changing favicons with JavaScript
+   * Works in all A-grade browsers except Safari and Internet Explorer
+   * Demo: http://mathiasbynens.be/demo/dynamic-favicons
+   */
+
+  // HTML5™, baby! http://mathiasbynens.be/notes/document-head
+  document.head || (document.head = document.getElementsByTagName('head')[0]);
+
+  function changeFavicon(src) {
+   var link = document.createElement('link'),
+       oldLink = document.getElementById('dynamic-favicon');
+   link.id = 'dynamic-favicon';
+   link.rel = 'shortcut icon';
+   link.href = src;
+   if (oldLink) {
+    document.head.removeChild(oldLink);
+   }
+   document.head.appendChild(link);
+  }
+
+
+  if ($("body.monday").size()){
+    changeFavicon('<%= image_path("blue-favicon.ico") %>');
+  } else if ($("body.tuesday").size()){
+    changeFavicon('<%= image_path("green-favicon.ico") %>');
+  } else if ($("body.wednesday").size()){
+    changeFavicon('<%= image_path("yellow-favicon.ico") %>');
+  } else if ($("body.thursday").size()){
+    changeFavicon('<%= image_path("orange-favicon.ico") %>');
+  } else if ($("body.friday").size()){
+    changeFavicon('<%= image_path("pink-favicon.ico") %>');
+  } else {
+    changeFavicon('<%= image_path("grey-favicon.ico") %>');
+  }
+});
