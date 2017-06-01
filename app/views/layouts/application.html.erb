@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body class="<%= Date.today.strftime("%A").downcase %>">
+  <body class="saturday">
     <div class="user_nav">
       <span class="icon-user-actions">
         <%= inline_svg "icon-gear.svg", class: 'icon-gear' %>
@@ -26,6 +26,7 @@
     </div>
 
     <h1 class="site-title"><a href="/">cinco</a></h1>
+    <p class="weekend-message">closed for the weekend</p>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

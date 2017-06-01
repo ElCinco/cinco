@@ -3,7 +3,7 @@ $color-tue: #5DA546;
 $color-wed: #FED500;
 $color-thur: #F6861F;
 $color-fri: #E7008C;
-$color-default: #6e6e6e;
+$color-weekend: #6e6e6e;
 
 @mixin content($color-main) {
   $visitedLinkColor:lighten( $color-main, 30% );
@@ -21,5 +21,6 @@ body.tuesday { @include content($color-tue); }
 body.wednesday { @include content($color-wed); }
 body.thursday { @include content($color-thur); }
 body.friday { @include content($color-fri); }
-//weekend/default colors
-body.saturday, body.sunday  { @include content($color-default); }
+body.saturday, body.sunday  { @include content($color-weekend);
+  .weekend-message {display:block}
+}

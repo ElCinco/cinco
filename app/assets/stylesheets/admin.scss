@@ -1,10 +1,14 @@
 $darkColor:#250D45;
 // style notices
-.notice, .alert {
+.notice, .alert, .weekend-message {
   position: absolute;
   top: 72px;
   width: 100%;
   text-align: center;
+  background-color: $darkColor;
+}
+
+.weekend-message {
 }
 
 // style user menu
