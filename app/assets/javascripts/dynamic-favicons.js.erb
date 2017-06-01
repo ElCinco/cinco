@@ -20,7 +20,6 @@ $(function() {
    document.head.appendChild(link);
   }
 
-
   if ($("body.monday").size()){
     changeFavicon('<%= image_path("blue-favicon.ico") %>');
   } else if ($("body.tuesday").size()){
@@ -34,4 +33,5 @@ $(function() {
   } else {
     changeFavicon('<%= image_path("grey-favicon.ico") %>');
   }
+
 });
