@@ -7,14 +7,25 @@
 }
 
 // style user menu
-.icon-user-actions {
-  box-sizing:initial;
+.user_nav {
+  position: absolute;
+  right: 50%;
+  margin-right: -120px;
+  top: 7px;
   width: 68px;
   height: 68px;
+  @media (max-width : 520px) {
+    right:18px;
+    margin:0;
+  }
+}
+.icon-user-actions {
+  box-sizing:initial;
+  width: 100%;
+  height: 100%;
   display: block;
   position: absolute;
-  top: 7px;
-  right: 22px;
+  //right: 22px;
   cursor: pointer;
   z-index: 20;
   margin:9px;
@@ -35,12 +46,16 @@
   position: absolute;
   top: 59px;
   right: -42px;
-  width: 502px;
+  width: 480px;
   height: 230px;
   background: #250D45;
   border: 9px solid;
   border-color:inherit;
   padding:26px;
+  @media (max-width : 520px) {
+      width:100vw;
+      right:-9px;
+  }
   li {
     color:inherit;
 
@@ -61,6 +76,9 @@
         top: -9px;
         right: 33px;
         background: #250d45;
+        @media (max-width : 520px) {
+            right:0;
+        }
       }
     }
     a {
@@ -71,11 +89,7 @@
 .show-user-nav {
   display:block;
 }
-.user_nav {
-  position: absolute;
-  right: 50%;
-  margin-right: -240px;
-}
+
 
 .title-header, .url-title {
   opacity:0;
