@@ -19,8 +19,9 @@
   z-index: 20;
   margin:9px;
   &:hover {
-    border:9px solid #00AEEF;
+    border:9px solid;
     border-bottom: 0;
+    border-color: inherit;
     margin:0;
   }
   .icon-gear {
@@ -37,10 +38,11 @@
   width: 502px;
   height: 230px;
   background: #250D45;
-  border: 9px solid #00AEEF;
+  border: 9px solid;
+  border-color:inherit;
   padding:26px;
   li {
-    color:#00AEEF;
+    color:inherit;
 
     text-align:center;
     &:first-child {
@@ -62,7 +64,7 @@
       }
     }
     a {
-      color:#00AEEF;
+      color:inherit;
     }
   }
 }
