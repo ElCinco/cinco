@@ -1,9 +1,13 @@
+$linkVisitedColor:#99DFF9;
+$lightColor:#00AEEF;
+$darkColor:#250D45;
+
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  background: #00AEEF;
+body {
+  //background: #00AEEF;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
@@ -13,4 +17,41 @@ a {
 
 li {
   margin-top:20px;
+}
+// layout stuff
+.content-wrap {
+  max-width:480px;
+  margin: 24px auto;
+  padding: 0 10px;
+}
+
+
+.site-title {
+  background:$darkColor;
+  padding:24px 0;
+  text-align: center;
+  a {
+    font-size:48px;
+    //color:#00AEEF;
+  }
+}
+
+
+.list {
+  a {
+    font-size:18px;
+    color:inherit;
+    &:visited {
+      //color:#99DFF9;
+    }
+  }
+}
+.date {
+  width: 100%;
+  display:block;
+  border-bottom:1px solid;
+  border-color:$darkColor;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
