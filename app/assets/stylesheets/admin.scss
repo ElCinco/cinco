@@ -126,7 +126,8 @@ $darkColor:#250D45;
 }
 .admin-links {
   text-align:center;
-  a {color:$darkColor;}
+  color:$darkColor;
+  a {color:inherit;}
 }
 .admin-welcome-header {
   color:$darkColor;
