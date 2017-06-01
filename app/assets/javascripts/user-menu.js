@@ -8,5 +8,4 @@ $(function() {
       $('.user-nav-items').removeClass('show-user-nav');
     }
   );
-
 });
