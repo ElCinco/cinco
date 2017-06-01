@@ -21,4 +21,4 @@ $(document).ready ->
   }
   $('#link_url').typeWatch(options)
 
-  $(".admin, .notice").delay(2000).fadeOut(300);
+  $(".alert, .notice").delay(2000).fadeOut(300);
