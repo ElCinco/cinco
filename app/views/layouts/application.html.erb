@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body class="saturday">
+  <body class="<%= Date.today.strftime("%A").downcase %>">
     <div class="user_nav">
       <span class="icon-user-actions">
         <%= inline_svg "icon-gear.svg", class: 'icon-gear' %>
@@ -25,11 +25,12 @@
       </span>
     </div>
 
-    <h1 class="site-title"><a href="/">cinco</a></h1>
-    <p class="weekend-message">closed for the weekend</p>
+    <h1 class="site-title"><a href="/">cinco.<span>is</span></a></h1>
+    <p class="site-description header-message">5 nice links</p>
+    <p class="weekend-message header-message">closed for the weekend</p>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="notice header-message"><%= notice %></p>
+    <p class="alert header-message"><%= alert %></p>
     <div class="content-wrap">
       <%= yield %>
     </div>

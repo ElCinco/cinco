@@ -1,14 +1,15 @@
 $darkColor:#250D45;
 // style notices
-.notice, .alert, .weekend-message {
+.header-message {
   position: absolute;
-  top: 72px;
+  top: 84px;
   width: 100%;
   text-align: center;
   background-color: $darkColor;
 }
 
 .weekend-message {
+  display:none;
 }
 
 // style user menu
@@ -16,7 +17,7 @@ $darkColor:#250D45;
   position: absolute;
   right: 50%;
   margin-right: -184px;
-  top: 7px;
+  top: 16px;
   width: 68px;
   height: 68px;
   @media (max-width : 520px) {
