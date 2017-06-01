@@ -20,3 +20,5 @@ $(document).ready ->
     wait: 300
   }
   $('#link_url').typeWatch(options)
+
+  $(".flash-wrapper").delay(2000).fadeOut(300);

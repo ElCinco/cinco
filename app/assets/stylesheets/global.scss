@@ -1,5 +1,3 @@
-$linkVisitedColor:#99DFF9;
-$lightColor:#00AEEF;
 $darkColor:#250D45;
 
 * {
@@ -37,16 +35,15 @@ li {
 }
 
 
-.list {
-  a {
-    font-size:18px;
-    color:$darkColor;
-    &:visited {
-      //color:#99DFF9;
-    }
+.list a {
+  font-size:18px;
+  color:$darkColor;
+  &:visited {
+    //color:#99DFF9;
   }
 }
 .date {
+  color:$darkColor;
   width: 100%;
   display:block;
   border-bottom:1px solid;

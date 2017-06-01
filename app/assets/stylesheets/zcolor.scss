@@ -13,6 +13,7 @@ $color-default: $color-mon;
   .list a:visited { color: $visitedLinkColor; }
   .notice, .alert { color:$color-main; }
   .icon-gear { fill:$color-main; }
+  
 }
 
 body.monday { @include content($color-mon); }
