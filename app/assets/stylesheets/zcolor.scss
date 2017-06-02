@@ -11,9 +11,9 @@ $color-weekend: #6e6e6e;
   color: $color-main;
   h1 a {color:$color-main}
   .list a:visited { color: $visitedLinkColor; }
-  .notice, .alert { color:$color-main; }
+  //.notice, .alert { color:$color-main; }
   .icon-gear { fill:$color-main; }
-
+  input { color:$color-main; }
 }
 
 body.monday { @include content($color-mon); }

@@ -1,18 +1,18 @@
-<h2 class="admin">Create Your Link</h2>
+<h2>Create Your Link</h2>
 
 <%= form_for(@link, url: admin_create_link_path(@link)) do |f| %>
   <ul class="admin-list">
     <li class="field">
-      <%= f.text_field :url, autofocus: true, autocomplete: "off", value: "url goes here..." %>
+      <%= f.text_field :url, autofocus: true, autocomplete: "off", placeholder: "paste url here..." %>
     </li>
 
     <li class="field">
-      <%= f.label :title, :class=> "title-header" %>
-      <p class="url-title"></p>
+      <!-- <%= f.label :title, :class=> "title-header" %> -->
+      <p class="url-title">headline appears here</p>
     </li>
 
     <li class="actions">
-      <%= f.submit "Save Link" %>
+      <%= f.submit "Save & Post Link" %>
     </li>
   </ul>
 <% end %>

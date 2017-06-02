@@ -1,6 +1,7 @@
 $darkColor:#250D45;
 // style notices
 .header-message {
+  color: inherit;
   position: absolute;
   top: 84px;
   width: 100%;
@@ -8,8 +9,13 @@ $darkColor:#250D45;
   background-color: $darkColor;
 }
 
+
 .weekend-message {
   display:none;
+}
+
+.alert, .notice {
+  color:#ffffff;
 }
 
 // style user menu
@@ -64,7 +70,6 @@ $darkColor:#250D45;
   }
   li {
     color:inherit;
-
     text-align:center;
     &:first-child {
       font-weight:bold;
@@ -98,14 +103,15 @@ $darkColor:#250D45;
 
 
 .title-header, .url-title {
-  opacity:0;
+  //opacity:0;
   transition: opacity .4s;
 }
 
 .url-title {
-  background-color: rgba(255,255,255,.25);
+  color:$darkColor;
   padding: 10px;
   width:100%;
+  background: rgba(255, 255, 255, .2);
 }
 
 .flash-in {
