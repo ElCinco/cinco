@@ -1,0 +1,12 @@
+- if @list
+  .list
+    %h2.date= l @list.publish_date
+    %ul
+      - @list.links.each do |link|
+        %li
+          %a{:href => "#{link.url}"}= link.title
+  %ul.list-paging
+    %li= link_to("Previous list", @list.previous_list) if @list.previous_list
+    %li= link_to("Next list", @list.next_list) if @list.next_list
+- else
+  No list!

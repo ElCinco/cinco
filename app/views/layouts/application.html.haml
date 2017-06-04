@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Cinco
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = favicon_link_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body{:class => "#{Date.today.strftime("%A").downcase}"}
+    .user_nav
+      %span.icon-user-actions
+        = inline_svg "icon-gear.svg", class: 'icon-gear'
+        %ul.user-nav-items
+          - if current_user
+            %li
+              Logged in as #{current_user.username}
+              %span.tilda ~
+              %span.the-dirtiest-code
+            %li
+              = link_to 'Post Something', admin_path
+            %li
+              = link_to 'Log out', destroy_user_session_path, :method => :delete
+          - else
+            %li= link_to 'Log In', admin_path
+      %span.the-dirtiest-code
+    %h1.site-title
+      %a{:href => "/"}
+        cinco.
+        %span is
+    %p.site-description.header-message
+      %span.italic 5
+      nice links
+    %p.weekend-message.header-message closed for the weekend
+    %p.notice.header-message= notice
+    %p.alert.header-message= alert
+    .content-wrap
+      = yield

@@ -1,0 +1,11 @@
+%ul.admin-links
+  %li.admin-welcome-header
+    Welcome #{current_user.username}
+    %span.tilda ~
+  %li
+    - if Link.created_for_today_by_user(current_user)
+      Link created by #{current_user.username} for #{Date.today}
+    - else
+      = link_to 'Create Link', admin_new_link_path
+  %li.button-outline
+    = link_to 'Change Password', edit_user_registration_path

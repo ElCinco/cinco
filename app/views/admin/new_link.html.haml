@@ -1,0 +1,10 @@
+%h2 Create Your Link
+= form_for(@link, url: admin_create_link_path(@link)) do |f|
+  %ul.admin-list
+    %li.field
+      = f.text_field :url, autofocus: true, autocomplete: "off", placeholder: "paste url here..."
+    %li.field
+      / <haml_loud> f.label :title, :class=&gt; &quot;title-header&quot; </haml_loud>
+      %p.url-title headline appears here
+    %li.actions
+      = f.submit "Save & Post Link"
