@@ -2,9 +2,11 @@ $darkColor:#250D45;
 
 * { box-sizing: border-box; }
 
-body { font-family: Georgia, Times, "Times New Roman", serif; }
+body { font-family: Georgia, Times, "Times New Roman", serif;}
 
 a { text-decoration: none; }
+
+p {color:$darkColor}
 
 li {
   margin-top:20px;
@@ -88,4 +90,9 @@ label {
   border-color:$darkColor;
   padding-bottom: 5px;
   margin-bottom: 15px;
+}
+.list-paging {
+  li {
+    float:left;
+  }
 }

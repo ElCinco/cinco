@@ -1,3 +1,4 @@
+$darkColor:#250D45;
 $color-mon: #00AEEF;
 $color-tue: #5DA546;
 $color-wed: #FED500;
@@ -8,7 +9,7 @@ $color-weekend: #6e6e6e;
 @mixin content($color-main) {
   $visitedLinkColor:lighten( $color-main, 30% );
   background: $color-main;
-  color: $color-main;
+  color: $darkColor;
   h1 a {color:$color-main}
   .list a:visited { color: $visitedLinkColor; }
   //.notice, .alert { color:$color-main; }
