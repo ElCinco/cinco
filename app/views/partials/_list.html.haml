@@ -6,7 +6,11 @@
         %li
           %a{:href => "#{link.url}"}= link.title
   %ul.list-paging
-    %li= link_to("Previous list", @list.previous_list) if @list.previous_list
-    %li= link_to("Next list", @list.next_list) if @list.next_list
+    %li
+      = link_to("<", @list.previous_list) if @list.previous_list
+      <!-- = inline_svg "square.svg", class: 'animated-sqaure' -->
+
+    %li
+      = link_to(">", @list.next_list) if @list.next_list
 - else
   No list!

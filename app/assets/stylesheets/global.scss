@@ -68,6 +68,7 @@ label {
   max-width:480px;
   margin: 24px auto;
   padding: 0 10px;
+  position: relative;
 }
 .site-title {
   background:$darkColor;
@@ -91,4 +92,53 @@ label {
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
-.list-paging  li { float:left; }
+.list-paging  {
+  width:100%;
+  position: absolute;
+  top: -8px;
+  li {
+    display: inline-block;
+    position:relative;
+    width:30px;
+    height:30px;
+    margin:initial;
+    cursor:pointer;
+    &::before {
+      position:absolute;
+      left:34px;
+      content: 'next link';
+      display: block;
+      opacity:0;
+      width:70px;
+      top:7px;
+    }
+    &:hover{
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:first-child {
+      margin-right:-2px;
+      &::before {
+        left: 68px;
+        content: 'prev link';
+        display: block;
+      }
+      a {
+        transform: rotate(180deg);
+      }
+    }
+    > * {
+      position:absolute;
+    }
+    a {
+      height:100%;
+      width:100%;
+      text-indent: -3000em;
+      background-image: image_url('triangle.png');
+      background-size: 35%;
+      background-repeat:no-repeat;
+      background-position: center;
+    }
+  }
+}
