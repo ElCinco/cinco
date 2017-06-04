@@ -106,7 +106,7 @@ label {
     &::before {
       position:absolute;
       left:34px;
-      content: 'next link';
+      content: 'next list';
       display: block;
       opacity:0;
       width:70px;
@@ -121,7 +121,7 @@ label {
       margin-right:-2px;
       &::before {
         left: 68px;
-        content: 'prev link';
+        content: 'prev list';
         display: block;
       }
       a {
