@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'admin/create_list'
   post 'admin/create_link'
 
-  resources :lists, only: [:index, :show]
+  resources :lists, only: [:index, :show], :path => '/'
 
   devise_for :users, :skip => [:registrations]
   as :user do

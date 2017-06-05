@@ -1,6 +1,9 @@
 class List < ApplicationRecord
   has_many :links
 
+  extend FriendlyId
+  friendly_id :publish_date
+
   def self.created_for_today
     list = List.last
 

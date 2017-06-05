@@ -1,11 +1,11 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = List.all
+    @list = List.last
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = List.friendly.find(params[:id])
   end
 
 end

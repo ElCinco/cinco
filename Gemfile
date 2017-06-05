@@ -55,3 +55,4 @@ gem 'pg'
 gem 'inline_svg'
 gem 'haml', '~> 4.0.5'
 gem "haml-rails", "~> 0.9"
+gem 'friendly_id', '~> 5.1.0'
