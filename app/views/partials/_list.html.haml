@@ -1,4 +1,5 @@
 - if @list
+  - content_for :body_class, @list.publish_date.strftime('%A').downcase
   .list
     %h2.date= l @list.publish_date
     %ul

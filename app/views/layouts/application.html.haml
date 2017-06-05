@@ -8,7 +8,8 @@
     = favicon_link_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-  %body{:class => "#{Date.today.strftime("%A").downcase}"}
+
+  %body{:class => "#{yield (:body_class)}"}
     .user_nav
       %span.icon-user-actions
         = inline_svg "icon-gear.svg", class: 'icon-gear'
