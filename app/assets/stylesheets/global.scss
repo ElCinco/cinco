@@ -4,13 +4,19 @@ $darkColor:#250D45;
 
 body { font-family: Georgia, Times, "Times New Roman", serif;}
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  &:active {
+     color:initial;
+  }
+}
 
 p {color:$darkColor}
 
 li {
-  margin-top:20px;
+  padding: 10px 0;
 }
+
 i, em {
   color: initial;
   opacity: .5;
@@ -46,6 +52,13 @@ input {
     border:none;
     background-color: $darkColor;
     height: 48px;
+    cursor:pointer;
+    &:hover {
+      background: darken($darkColor, 5%);
+    }
+    &:active {
+      background: lighten($darkColor, 10%);
+    }
   }
   &[type=checkbox] {
     width: auto;
@@ -57,10 +70,18 @@ label {
 }
 
 .button-outline {
-  border: 1px solid #250D45;
-  padding: 20px 40px;
-  display: inline-block;
-  width: 260px;
+  a {
+    border: 1px solid $darkColor;
+    padding: 20px 40px;
+    display: inline-block;
+    width: 260px;
+    &:hover {
+      background: rgba(0,0,0,.05);
+    }
+    &:active {
+      background: rgba(255,255,255,.15);
+    }
+  }
 }
 
 // layout stuff
@@ -92,6 +113,8 @@ label {
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
+
+//paging styles START
 .list-paging  {
   position: absolute;
   top: -8px;
@@ -141,3 +164,4 @@ label {
     }
   }
 }
+//paging styles END
