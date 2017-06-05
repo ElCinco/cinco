@@ -14,9 +14,9 @@ li {
 i, em {
   color: initial;
   opacity: .5;
-  width: 100%;
+  width: 90%;
   display: block;
-  margin: 10px 0;
+  margin: 10px 5%;
 }
 h2 {
   color:$darkColor;
@@ -93,7 +93,6 @@ label {
   margin-bottom: 15px;
 }
 .list-paging  {
-  width:100%;
   position: absolute;
   top: -8px;
   li {
