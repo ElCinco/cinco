@@ -17,13 +17,12 @@ $color-weekend: #6e6e6e;
   input { color:$color-main; }
 }
 
-
-body.saturday, body.sunday, body.default { @include content($color-weekend);
-  //.weekend-message {display:block}
-}
-
+body.default { @include content($color-weekend);}
 body.monday{ @include content($color-mon); }
 body.tuesday { @include content($color-tue); }
 body.wednesday { @include content($color-wed); }
 body.thursday { @include content($color-thur); }
 body.friday { @include content($color-fri); }
+body.saturday, body.sunday, body.default { @include content($color-weekend);
+  .weekend-message {display:block}
+}

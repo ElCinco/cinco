@@ -24,8 +24,9 @@
             %li
               = link_to 'Log out', destroy_user_session_path, :method => :delete
           - else
-            %li= link_to 'Log In', admin_path
-      %span.the-dirtiest-code
+            %li
+              = link_to 'Log In', admin_path
+              %span.the-dirtiest-code
     %h1.site-title
       %a{:href => "/"}
         cinco.<span>is</span>
