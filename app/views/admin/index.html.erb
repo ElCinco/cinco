@@ -4,7 +4,7 @@
     <% if Link.created_for_today_by_user(current_user) %>
       Link created by <%= current_user.username %> for <%= Date.today %>
     <% else %>
-      <%= link_to 'Create Link', admin_new_link_path %>
+      <%= link_to 'Create Link', admin_new_link_path, :class => "button-outline" %>
     <% end %>
   </li>
   <li class="button-outline">
