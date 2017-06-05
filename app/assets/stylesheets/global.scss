@@ -13,7 +13,7 @@ a {
 
 p {color:$darkColor}
 
-li {
+.list li {
   padding: 10px 0;
 }
 
@@ -70,17 +70,15 @@ label {
 }
 
 .button-outline {
-  a {
-    border: 1px solid $darkColor;
-    padding: 20px 40px;
-    display: inline-block;
-    width: 260px;
-    &:hover {
-      background: rgba(0,0,0,.05);
-    }
-    &:active {
-      background: rgba(255,255,255,.15);
-    }
+  border: 1px solid $darkColor;
+  padding: 20px 40px;
+  display: inline-block;
+  width: 260px;
+  &:hover {
+    background: rgba(0,0,0,.05);
+  }
+  &:active {
+    background: rgba(255,255,255,.15);
   }
 }
 
@@ -116,6 +114,7 @@ label {
 
 //paging styles START
 .list-paging  {
+  width:100%;
   position: absolute;
   top: -8px;
   li {
@@ -125,29 +124,27 @@ label {
     height:30px;
     margin:initial;
     cursor:pointer;
-    &::before {
-      position:absolute;
-      left:34px;
-      content: 'next list';
-      display: block;
-      opacity:0;
-      width:70px;
-      top:7px;
-    }
-    &:hover{
-      &:before {
-        opacity: 1;
+    a {
+      &::before {
+        position:absolute;
+        left:38px;
+        color:initial;
+        content: 'next list';
+        display: block;
+        opacity:0;
+        width:70px;
+        top:7px;
       }
     }
     &:first-child {
-      margin-right:-2px;
-      &::before {
-        left: 68px;
-        content: 'prev list';
-        display: block;
-      }
+      margin-right:-3px;
       a {
         transform: rotate(180deg);
+        &::before {
+          left: 68px;
+          content: 'prev list';
+          display: block;
+        }
       }
     }
     > * {
@@ -161,6 +158,17 @@ label {
       background-size: 35%;
       background-repeat:no-repeat;
       background-position: center;
+      &:hover {
+        background-color: rgba(255, 255, 255, .1);
+        &:hover{
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+      &:active {
+        background-color: rgba(255, 255, 255, .3);
+      }
     }
   }
 }
