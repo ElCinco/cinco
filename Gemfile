@@ -53,3 +53,5 @@ gem 'devise'
 gem 'pg'
 
 gem 'inline_svg'
+gem 'haml', '~> 4.0.5'
+gem "haml-rails", "~> 0.9"

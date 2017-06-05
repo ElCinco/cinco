@@ -10,4 +10,13 @@ class List < ApplicationRecord
 
     false
   end
+
+  def previous_list
+    self.class.where("publish_date < ?", publish_date).order(publish_date: :desc).first
+  end
+
+  def next_list
+    self.class.where("publish_date > ?", publish_date).order(publish_date: :asc).last
+  end
+
 end
