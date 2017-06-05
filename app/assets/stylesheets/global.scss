@@ -100,9 +100,15 @@ label {
     font-weight: 300;
   }
 }
-.list a {
-  font-size:18px;
-  color:$darkColor;
+.list {
+  ul {
+    width:90%;
+    margin:0 5%;
+  }
+  a {
+    font-size:18px;
+    color:$darkColor;
+  }
 }
 .date {
   width: 100%;
