@@ -2,7 +2,7 @@ $darkColor:#250D45;
 
 * { box-sizing: border-box; }
 
-body { font-family: Georgia, Times, "Times New Roman", serif; overflow:hidden;}
+body { font-family: Georgia, Times, "Times New Roman", serif;}
 
 a {
   text-decoration: none;
@@ -161,6 +161,7 @@ label {
       height:100%;
       width:100%;
       text-indent: -3000em;
+      overflow:hidden;
       background-image: image_url('triangle.png');
       background-size: 35%;
       background-repeat:no-repeat;
