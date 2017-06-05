@@ -19,7 +19,7 @@ $color-weekend: #6e6e6e;
 
 
 body.saturday, body.sunday, body.default { @include content($color-weekend);
-  .weekend-message {display:block}
+  //.weekend-message {display:block}
 }
 
 body.monday{ @include content($color-mon); }
