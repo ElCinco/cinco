@@ -9,7 +9,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
 
-  %body{:class => "#{yield (:body_class)}"}
+  %body{:class => "default #{yield (:body_class)}"}
     .user_nav
       %span.icon-user-actions
         = inline_svg "icon-gear.svg", class: 'icon-gear'
