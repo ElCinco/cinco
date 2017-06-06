@@ -2,8 +2,10 @@ $(function() {
 
   $("body").keydown(function(e) {
     if($('.prev-list-button').size() & e.keyCode == 37) { // left
+      $('.prev-list-button').addClass('active')
       $('.prev-list-button')[0].click();
     } else if($('.next-list-button').size() & e.keyCode == 39) { // right
+      $('.next-list-button').addClass('active')
       $('.next-list-button')[0].click();
     }
   });
