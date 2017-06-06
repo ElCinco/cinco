@@ -2,6 +2,7 @@ $(function() {
 
   // widow fix
   $('.list li a').widowFix();
+
   $("body").keydown(function(e) {
     if($('.prev-list-button').size() & e.keyCode == 37) { // left
       $('.prev-list-button').addClass('active');
