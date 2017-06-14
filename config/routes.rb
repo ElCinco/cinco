@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "lists#index"
+
   get 'admin/index'
   get 'admin/new_list'
   get 'admin/new_link'
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
   post 'admin/create_list'
   post 'admin/create_link'
 
-  resources :lists, only: [:index, :show]
+  resources :lists, only: [:index, :show], :path => '/'
 
   devise_for :users, :skip => [:registrations]
   as :user do
@@ -16,5 +18,4 @@ Rails.application.routes.draw do
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "home#index"
 end

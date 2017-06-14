@@ -1,11 +1,14 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = List.all
+    @list = List.last
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = List.friendly.find(params[:id])
+    if request.path != list_path(@list)
+      redirect_to @list, status: :moved_permanently
+    end
   end
 
 end

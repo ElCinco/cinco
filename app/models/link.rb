@@ -1,6 +1,8 @@
 class Link < ApplicationRecord
   belongs_to :user
   belongs_to :list
+
+
   validate :on => :create do
     if list && list.links.length >= 5
       errors.add(:list, :too_many_links)
