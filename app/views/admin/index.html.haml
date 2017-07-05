@@ -4,7 +4,7 @@
     %span.tilda ~
   %li
     - if @list && @list.links.length >= 5
-      list full
+      Today's list is full
     - else
       = link_to 'Create Link', admin_new_link_path, :class => "button-outline"
   %li
