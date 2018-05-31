@@ -31,4 +31,10 @@ class User < ApplicationRecord
       where(conditions.to_hash).first
     end
   end
+
+  ## thumbs up/down
+  acts_as_voter     # relationship :votes will be obscured by the same named relationship from acts_as_voteable :(
+  acts_as_voteable
+
+
 end

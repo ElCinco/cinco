@@ -26,4 +26,6 @@ class List < ApplicationRecord
     self.class.where("publish_date > ?", publish_date).order(publish_date: :asc).first
   end
 
+  acts_as_voteable
+
 end

@@ -14,4 +14,7 @@ class Link < ApplicationRecord
       return Link.find_by(user: user, list: List.last)
     end
   end
+
+  acts_as_voteable
+
 end
