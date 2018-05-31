@@ -6,7 +6,17 @@
       - @list.links.each do |link|
         %li
           %a{:href => "#{link.url}"}= link.title
-                    
+          %p.vote-wrap
+            - if current_user
+              - if current_user.voted_on?(link) == false
+                = link_to('it was good', vote_up_link_path(link), :method => :post)
+              - else
+                you voted! -
+
+            - if link.votes_for > 0
+              \# of people that liked this:
+              %span.vote-count
+                = link.votes_for
   %ul.list-paging
     %li
       = link_to("<", @list.previous_list, class: 'prev-list-button') if @list.previous_list
