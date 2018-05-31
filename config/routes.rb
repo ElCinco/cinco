@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'links/index'
+
+  get 'links/show'
+
   root to: "lists#index"
 
   get 'admin/index'
@@ -10,7 +14,17 @@ Rails.application.routes.draw do
   post 'admin/create_list'
   post 'admin/create_link'
 
-  resources :lists, only: [:index, :show], :path => '/'
+  resources :lists, only: [:index, :show], :path => '/' do
+    member do
+      post :vote_up
+    end
+  end
+
+  resources :links, only: [:index, :show] do
+    member do
+      post :vote_up
+    end
+  end
 
   devise_for :users, :skip => [:registrations]
   as :user do

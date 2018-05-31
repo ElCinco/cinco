@@ -15,6 +15,7 @@ $color-weekend: #868686;
   //.notice, .alert { color:$color-main; }
   .icon-gear { fill:$color-main; }
   input { color:$color-main; }
+  .vote-wrap a:visited { color:$darkColor; }
 }
 
 body.default { @include content($color-weekend);}

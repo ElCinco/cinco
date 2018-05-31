@@ -112,6 +112,13 @@ label {
     font-size:18px;
     color:$darkColor;
   }
+  .vote-wrap {
+    font-size: 13px;
+    a {
+      font-size: 13px;
+      text-decoration: underline;
+    }
+  }
 }
 .date {
   width: 100%;
