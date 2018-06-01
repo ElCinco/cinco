@@ -10,7 +10,9 @@ a {
      color:initial;
   }
 }
-
+.hidden {
+  display: none;
+}
 p {color:$darkColor}
 
 li { margin-top: 20px;}

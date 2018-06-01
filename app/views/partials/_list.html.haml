@@ -6,7 +6,7 @@
       - @list.links.each do |link|
         %li
           %a{:href => "#{link.url}"}= link.title
-          %p.vote-wrap
+          %p.vote-wrap.hidden
             - if current_user
               - if current_user.voted_on?(link) == false
                 = link_to('it was good', vote_up_link_path(link), :method => :post)
