@@ -120,6 +120,19 @@ label {
       font-size: 13px;
       text-decoration: underline;
     }
+    .vote-btn {
+      height: 15px;
+      width: 10px;
+      text-indent: -3000em;
+      overflow: hidden;
+      display: inline-block;
+      background-image: image_url('fire-icon.png');
+      background-repeat:no-repeat;
+      background-position: center;
+    }
+    .inactive-btn {
+      opacity: .5;
+    }
   }
 }
 .date {

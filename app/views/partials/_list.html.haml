@@ -8,12 +8,12 @@
           %a{:href => "#{link.url}"}= link.title
           %p.vote-wrap
             - if current_or_guest_user.voted_on?(link) == false
-              = link_to('it was good', vote_up_link_path(link), :method => :post)
+              = link_to('it was good', vote_up_link_path(link), :method => :post, :class => "vote-btn")
             - else
-              you voted! -
+              %span.vote-btn.inactive-btn
 
             - if link.votes_for > 0
-              \# of people that liked this:
+
               %span.vote-count
                 = link.votes_for
   %ul.list-paging
